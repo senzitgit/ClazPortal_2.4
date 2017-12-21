@@ -1,0 +1,6 @@
+---
+applications:
+- name: ClazPortal
+  memory: 512M
+  host: clazportal
+  domain: mybluemix.net

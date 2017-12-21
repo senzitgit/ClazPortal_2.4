@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>CyberClaz | Claz Element</title>
+      <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+     
+     	 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link rel="icon" href="favicon.ico" type="image/x-icon">	
+     
+     
+      <!-- CSS  -->
+      <link rel="stylesheet" href="css/app.v2.css" type="text/css" />
+      <link rel="stylesheet" href="css/font.css" type="text/css" cache="false" />
+      <link rel="stylesheet" href="js/fuelux/fuelux.css" type="text/css" />
+      <!-- JS -->
+      <script src="js/google/jquery.min.js"></script> 
+      <script src="js/google/jquery-ui.js"></script>
+      <script type="text/javascript" src="js/jason_parser.js"></script>
+      <script src="js/Controllers/webServerService.js"></script>
+      <script src="js/highcharts.js"></script>
+      <!--[if lt IE 9]>
+<script src="https://code.highcharts.com/modules/oldie.js"></script>
+<![endif]-->
+      
+       <style>
+
+
+.sidenav1 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav1 h6{
+color:#000;
+}
+
+.sidenav1 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+   
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav1 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav1 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav1 {padding-top: 15px;}
+  .sidenav1 a {font-size: 18px;}
+}
+</style>
+
+
+
+      <style>
+
+
+.sidenav2 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav2 h6{
+color:#000;
+}
+
+.sidenav2 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+   
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav2 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav2 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav2 {padding-top: 15px;}
+  .sidenav2 a {font-size: 18px;}
+}
+</style>
+
+
+
+
+      <style>
+
+
+.sidenav3 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav2 h6{
+color:#000;
+}
+
+.sidenav3 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+   
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav3 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav3 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav3 {padding-top: 15px;}
+  .sidenav3 a {font-size: 18px;}
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </head>
+   <body>
+      <section class="hbox stretch">
+             <aside class="bg-black dk aside-sm nav-vertical only-icon" id="nav">
+            <section class="vbox" >
+               <header class="dker nav-bar" > <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="#nav"> <i class="fa fa-bars"></i> </a> <a href="javascript:void(0)" class="nav-brand" style=""><img src="images/login-logo.png"  id="proImg" style="width:60px;"></a> <a onclick ="signout()" class="btn btn-link visible-xs" > <i class="fa fa-power-off"></i> </a>  </header>
+               <footer class="footer lt hidden-xs text-center"> <a href="javascript:void(0)" onclick ="signout()"  class="btn btn-sm btn-link"> <i class="fa fa-power-off"></i> <br>Exit </a> </footer>
+               <section>
+           
+                 <!-- user --> 
+                  <div class="lt nav-user hidden-xs pos-rlt" style="    margin-top: -50px;">
+                     <div class="nav-avatar pos-rlt" id="picturePanel">
+                       
+                      
+                     </div>
+                  </div>
+                  <!-- / user --> <!-- nav --> 
+                  <nav class="nav-primary hidden-xs">
+                     <ul class="nav" id="sideBar">
+                       
+                
+                       </ul>
+                  </nav>
+                  <!-- / nav --> 
+               </section>
+            </section>
+         </aside>
+   
+          
+         <!-- .vbox --> 
+         <section id="content">
+            <section class="hbox stretch bg-white-only">
+               <!-- .aside --> 
+               <aside class="">
+                  <section class="vbox">
+                     <header class="header bg-white pos-rlt navbar navbar-default show" Style="border-bottom:1px solid #F2F2F2;">
+                        <span class="arrow left" style="border-right-color:#fff"></span> 
+                        <div class="collapse navbar-collapse pull-in">
+                           <img src="images/logo.png" height="50px">
+                           <ul class="nav navbar-nav navbar-right">
+                              <li class="hidden-xs">
+                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                    <form name="Tick">
+                                       <b>
+                                          <div  class="fa fa-clock-o text-muted" style="font-size:20px;"></div>
+                                          &nbsp;&nbsp;<input type="text" size="11" name="Clock" style="font-size:15px;border:none; background: transparent;" readonly>
+                                       </b>
+                                    </form>
+                                 </a>
+                              </li>
+                              
+                              
+                              
+                              
+                                            <li class="dropdown">
+            <a href="#" class="dropdown-toggle  dker" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left m-t-n-xs m-r-xs" id="picturePanelNav"> </span> <span id="namePanelNav"></span> <b class="caret"></b> </a> 
+            <ul class="dropdown-menu animated fadeInLeft">
+         
+               <li> <a href="profile.html"><i class="fa fa-user"></i>&nbsp;&nbsp;Profile</a> </li>
+              
+               <li> <a href="javascript:void(0)" onclick ="signout()"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a> </li>
+            </ul>
+         </li>
+                              
+                              
+                              
+                              
+                           </ul>
+                        </div>
+                     </header>
+                     <section>
+                  
+                                   <div id="mySidenav1" class="sidenav1">
+                     
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+          <section class="scrollable wrapper"  style="margin-top:-50px;">
+          <img src="images/logo.png" height="50px">
+                             <div class="col-lg-12">   
+                             
+                     
+                     
+                     
+                     
+             <script>
+             $(function () { 
+            	    var myChart = Highcharts.chart('container', {
+            	        chart: {
+            	            type: 'line'
+            	        },
+            	        title: {
+            	            text: 'Behavior Spotlights'
+            	        },
+            	        subtitle: {
+            	            text: ''
+            	        },
+            	        xAxis: {
+            	            categories: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4', 'Semester 5', 'Semester 6', 'Semester 7', 'Semester 8']
+            	        },
+            	        yAxis: {
+            	            title: {
+            	                text: ''
+            	            }
+            	        },
+            	        plotOptions: {
+            	            line: {
+            	                dataLabels: {
+            	                    enabled: true
+            	                },
+            	                enableMouseTracking: false
+            	            }
+            	        },
+            	        series: [{
+            	            name: 'Positive Behavior',
+            	            data: [2, 6, 9, 7, 5, 5, 7, 4]
+            	        }, {
+            	            name: 'Concerning Behavior ',
+            	            data: [1,0, 3, 5, 0, 4, 5, 3]
+            	        }]
+            	    });
+            	});
+</script>        
+              <div id="container" style="width:100%; height:400px;"></div>
+ 
+                     
+                     
+                     </div>
+                           </section>
+</div>
+
+
+
+<script>
+function openNav1() {
+    document.getElementById("mySidenav1").style.width = "50%";
+}
+
+function closeNav1() {
+    document.getElementById("mySidenav1").style.width = "0";
+}
+</script>       
+
+
+
+
+
+
+
+
+
+
+                                   <div id="mySidenav2" class="sidenav2">
+                     
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+          <section class="scrollable wrapper"  style="margin-top:-50px;">
+          <img src="images/logo.png" height="50px">
+                             <div class="col-lg-12">   
+                             
+                     
+<div class="timeline">
+   <article class="timeline-item active">
+      <div class="timeline-caption">
+         <div class="panel bg-success lter no-borders">
+            <div class="panel-body">
+               <span class="timeline-icon"><i class="fa fa-arrow-circle-o-down time-icon bg-success"></i></span> <span class="timeline-date">Joined on</span> 
+             
+               <div class="m-t-sm timeline-action"> <span class="h3 pull-left m-r-sm">10th July 2017</span> </div>
+            </div>
+         </div>
+      </div>
+   </article>
+   <article class="timeline-item">
+      <div class="timeline-caption">
+         <div class="panel">
+            <div class="panel-body">
+               <span class="arrow left"></span> <span class="timeline-icon"><i class="fa fa-file-text time-icon bg-primary"></i></span> <span class="timeline-date">17th August 2017</span> 
+               <h5> <span>Note</span>Missed  first assignment. </h5>
+            </div>
+         </div>
+      </div>
+   </article>
+   <article class="timeline-item alt">
+      <div class="timeline-caption">
+         <div class="panel">
+            <div class="panel-body">
+               <span class="arrow right"></span> <span class="timeline-icon"><i class="fa fa-file-text time-icon bg-success"></i></span> <span class="timeline-date">11th September 2017</span> 
+               <h5><span>Note</span>Expressed some difficulties at home and issues with keeping work organized.</h5>
+              
+            </div>
+         </div>
+      </div>
+   </article>
+   <article class="timeline-item">
+      <div class="timeline-caption">
+         <div class="panel">
+            <div class="panel-body">
+               <span class="arrow left"></span> <span class="timeline-icon"><i class="fa fa-headphones time-icon bg-dark"></i></span> <span class="timeline-date">2nd October 2017</span> 
+               <h5> <span>Interest</span> Harry Porter is one of the favorite series and had read each book more than once.
+ </h5>
+              
+            </div>
+         </div>
+      </div>
+   </article>
+   <article class="timeline-item alt">
+      <div class="timeline-caption">
+         <div class="panel">
+            <div class="panel-body">
+               <span class="arrow right"></span> <span class="timeline-icon"><i class="fa fa-puzzle-piece time-icon bg-info"></i></span> <span class="timeline-date">15th October 2017</span> 
+               <h5> <span>Extracurricular</span> Music club added </h5>
+            </div>
+         </div>
+      </div>
+   </article>
+   <article class="timeline-item">
+      <div class="timeline-caption">
+         <div class="panel">
+            <div class="panel-body">
+               <span class="arrow left"></span> <span class="timeline-icon"><i class="fa fa-lightbulb-o time-icon bg-dark"></i></span> <span class="timeline-date">10th November 2017</span> 
+               <h5> <span>Spotlight</span> Absent </h5>
+              
+            </div>
+         </div>
+      </div>
+   </article>
+   
+      <article class="timeline-item">
+      <div class="timeline-caption">
+         <div class="panel">
+            <div class="panel-body">
+               <span class="arrow left"></span> <span class="timeline-icon"><i class="fa fa-headphones time-icon bg-dark"></i></span> <span class="timeline-date">1st December 2017</span> 
+               <h5> <span>Interest</span> Likes to solve riddles and looks for books that allow her to do that
+ </h5>
+              
+            </div>
+         </div>
+      </div>
+   </article>
+   <div class="timeline-footer"><a href="#"><i class="fa fa-plus time-icon inline-block bg-dark"></i></a></div>
+</div>                     
+                     
+                     
+                     
+                     
+                     
+                     </div>
+                           </section>
+</div>
+
+
+
+<script>
+function openNav2() {
+    document.getElementById("mySidenav2").style.width = "75%";
+}
+
+function closeNav2() {
+    document.getElementById("mySidenav2").style.width = "0";
+}
+</script> 
+
+
+
+
+
+
+
+
+                                          <div id="mySidenav3" class="sidenav3">
+                     
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+          <section class="scrollable wrapper"  style="margin-top:0px;">
+       
+                             <div class="col-lg-12">   
+                             
+<div class="col-sm-12">
+   <section class="panel">
+      <header class="panel-heading">    <div class="m-b-sm pull-right"> <div class="btn-group"> 
+      <button type="button" class="btn btn-white" id="addAssignmentButton"><i class="fa fa-plus"></i>&nbsp;&nbsp;Create</button> 
+      
+      
+      </div> </div>
+ 
+ 
+ <h4><img src="images/assignment.png" height="40px" style="margin-bottom:0px;">&nbsp;&nbsp;Assignment Tracker</a></h4>
+      
+      <br>
+      <div class="form-group">
+                                                      <label class="col-lg-4 control-label">Select Assignment</label> 
+                                                      <div class="col-lg-8"> <select id="listOfAssign"  class="form-control" placeholder="Select Assignment"  data-required="true" onchange="listAssignStudents()"></select> </div>
+                                                   </div>
+      <br><br>
+      
+       </header>
+      <table class="table table-striped m-b-none text-sm">
+         <thead>
+            <tr>
+            <th>Student Name</th>
+            <th>Progress</th>
+            <th></th>
+               
+               </tr>
+         </thead> 
+         <tbody id="assignTracker">
+           
+            
+         </tbody>
+      </table>
+   </section>
+</div>
+
+
+
+
+
+
+
+                     
+                     </div>
+                           </section>
+</div>
+
+
+
+<script>
+function openNav3() {
+    document.getElementById("mySidenav3").style.width = "50%";
+}
+
+function closeNav3() {
+    document.getElementById("mySidenav3").style.width = "0";
+}
+</script>    
+       
+
+
+
+
+
+      
+            
+       
+  
+                         <section class="hbox stretch">
+                     <!-- .aside --> 
+                     <aside>
+                        <section class="vbox">
+                        
+							<div id="classHeader"></div>                            
+                           <section class="scrollable wrapper" style="margin-top:190px;">
+                             <div class="col-lg-12">   
+                             
+                              <div id="listStudents">
+ 							  
+ 							  
+ 							  
+							  
+ 							  
+ 							  
+ 	
+     
+				  
+ 							  
+ 							  
+ 							  
+ 							  
+ 							  
+ 							  </div></div>
+                           </section>
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                        </section>
+                     </aside>
+                     <!-- /.aside --> 
+                  </section>
+       
+       
+       
+       
+       
+                                
+                     </section>
+                  </section>
+               </aside>
+               <!-- /.aside --> 
+            </section>
+            <a href="javascript:void(0)" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a> 
+         </section>
+         <!-- /.vbox --> 
+      </section>
+      
+      
+      
+      
+      
+      
+      
+            <div class="modal fade" id="sendStudentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body" id="modalAttendBoday">
+                  <br>
+				
+				
+				
+				
+			<form role="form" action="javascript:void(0)"  id="break_frm" method="post"  >
+				
+				
+				
+				
+				
+				<header class="panel-heading font-bold">BREAKS</header>
+				<div class="radio"> 
+					<label class="radio-custom"> 
+					  <input type="radio" checked="checked" name="breaks" value="BREAKS - Brain Break"> 
+					  <i class="fa fa-circle-o checked"></i> Brain Break
+					</label> 
+				</div>               
+				<div class="radio"> <label class="radio-custom"> 
+				<input type="radio"  name="breaks" value="BREAKS - Restroom Break"> 
+				<i class="fa fa-circle-o"></i> Restroom Break </label> </div> 
+				
+				
+				
+				<input type="hidden" id="sendStudentId">
+
+
+
+				
+				<header class="panel-heading font-bold">ADMINISTRATIVE</header>
+				<div class="radio"> 
+					<label class="radio-custom"> 
+					  <input type="radio" name="breaks" value="ADMINISTRATIVE - Counseling"> 
+					  <i class="fa fa-circle-o"></i> Counseling
+					</label> 
+				</div>               
+				<div class="radio"> <label class="radio-custom"> 
+				<input type="radio"  name="breaks" value="ADMINISTRATIVE - Advisory"> 
+				<i class="fa fa-circle-o"></i> Advisory</label> </div> 
+				<div class="radio"> <label class="radio-custom"> 
+				<input type="radio"  name="breaks" value="ADMINISTRATIVE - Nursing"> 
+				<i class="fa fa-circle-o"></i> Nursing</label> </div> 
+				
+				
+
+
+
+
+				
+				
+				<header class="panel-heading font-bold">ALTERNATE CLASSOOM</header>
+				<div class="radio"> 
+					<label class="radio-custom"> 
+					  <input type="radio"  name="breaks" value="ALTERNATE CLASSOOM - School Approved Event"> 
+					  <i class="fa fa-circle-o"></i> School Approved Event
+					</label> 
+				</div>               
+				<div class="radio"> <label class="radio-custom"> 
+				<input type="radio"  name="breaks" value="ALTERNATE CLASSOOM - Teacher"> 
+				<i class="fa fa-circle-o"></i> Teacher</label> </div> 
+				
+			
+				
+				</div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" 
+                     data-dismiss="modal">Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary" Style="border:none;background-color:#00c6c1" >Send
+                  </button>
+               </div>
+               
+               
+               
+               
+               	</form>
+               
+               
+               
+               
+            </div>
+         </div>
+      </div>
+      
+      
+      
+      
+            
+            <div class="modal fade" id="spotlightModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body" id="">
+                  <br>
+				
+				
+				
+				
+				
+				
+			<form role="form" action="javascript:void(0)"  id="spot_frm" method="post">
+	
+				<header class="panel-heading font-bold">BEHAVIOUR SPOTLIGHT</header>
+		
+
+   
+   				
+<div class="panel-group m-b" id="accordion2">
+   <div class="panel">
+       <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><div class="panel-heading">  Positive Behaviour  </div> </a>
+      <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+         <div class="panel-body text-sm"> 
+
+
+   
+   <div class="radio"> 
+					<label class="radio-custom"> 
+					  <input type="radio" name="radio" checked="checked" value="Positive Behaviour - Leader"> 
+					  <i class="fa fa-circle-o checked"></i> Leader
+					</label> 
+				</div>               
+				<div class="radio"> <label class="radio-custom"> <input type="radio" name="radio" value="Positive Behaviour - Helpful"> 
+				<i class="fa fa-circle-o"></i> Helpful </label> </div> 
+				<div class="radio"> <label class="radio-custom"> <input type="radio" name="radio" value="Positive Behaviour - Enthusiastic"> 
+				<i class="fa fa-circle-o"></i> Enthusiastic </label> </div> 
+				<div class="radio"> <label class="radio-custom"> <input type="radio" name="radio" value="Positive Behaviour - Risk Taker"> 
+				<i class="fa fa-circle-o"></i> Risk Taker </label> </div> 
+				<div class="radio"> <label class="radio-custom"> <input type="radio" name="radio" value="Positive Behaviour - Contributor"> 
+				<i class="fa fa-circle-o"></i> Contributor</label> </div> 
+				<div class="radio"> <label class="radio-custom"> <input type="radio" name="radio" value="Positive Behaviour - Collaborator"> 
+				<i class="fa fa-circle-o"></i> Collaborator </label> </div> 
+   
+   <textarea id ="adInfo1"  class="adInfo form-control parsley-validated" rows="6" data-minwords="6" data-required="true" placeholder="Additional Information.."></textarea>
+
+
+
+</div>
+      </div>
+   </div>
+
+
+
+
+
+   <div class="panel">
+     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">  <div class="panel-heading">     Concerning Behaviour   </div></a> 
+      <div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
+         <div class="panel-body text-sm"> 
+
+
+   
+
+                <div class="radio"> 
+					<label class="radio-custom"> 
+					  <input type="radio" name="radio"  value="Homework Missing"> 
+					  <i class="fa fa-circle-o "></i> Homework Missing
+					</label> 
+				</div> 
+   
+      <textarea id ="adInfo2"  class="adInfo form-control parsley-validated" rows="6" data-minwords="6" data-required="true" placeholder="Additional Information.."></textarea>
+   
+
+
+
+</div>
+      </div>
+   </div>
+
+</div>				
+				
+				
+   
+
+
+				
+				
+				<input type="hidden" id="spotStudentId">
+
+
+			
+
+				<header class="panel-heading font-bold">OTHER SPOTLIGHT</header>
+<!-- 				<section class="panel">
+   <header class="panel-heading">
+      <ul class="nav nav-pills pull-right">
+         <li> <a href="#" class="panel-toggle text-muted active"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a> </li>
+      </ul>
+  Academic 
+   </header>
+   <section class="panel-body collapse">
+    </section>
+  </section>
+  <section class="panel">
+   <header class="panel-heading">
+      <ul class="nav nav-pills pull-right">
+         <li> <a href="#" class="panel-toggle text-muted active"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a> </li>
+      </ul>
+  Medical
+   </header>
+   <section class="panel-body collapse">
+    </section>
+  </section> -->
+  
+  
+  
+  
+  <div class="panel-group m-b" id="accordion2">
+
+
+
+
+
+   <div class="panel">
+     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">  <div class="panel-heading">     Material Issue    </div></a> 
+      <div id="collapseThree" class="panel-collapse collapse" style="height: 0px;">
+         <div class="panel-body text-sm"> 
+
+
+   
+
+                <div class="radio"> 
+					<label class="radio-custom"> 
+					  <input type="radio" name="radio"  value="Material Issue "> 
+					  <i class="fa fa-circle-o "></i> Material Issue 
+					</label> 
+				</div> 
+   
+      <textarea id ="adInfo3" class=" form-control parsley-validated" rows="6" data-minwords="6" data-required="true" placeholder="Additional Information.."></textarea>
+   
+
+
+
+</div>
+      </div>
+   </div>
+
+</div>	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+				
+				
+				</div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" 
+                     data-dismiss="modal">Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary" Style="border:none;background-color:#00c6c1" >Send
+                  </button>
+               </div>
+               
+               
+               
+               
+               
+               </form>
+               
+               
+               
+               
+               
+               
+            </div>
+         </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+           <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body" id="modalAttendBoday">
+                  <br>
+				
+					<section class="vbox">
+
+      <div class="wrapper">
+      
+      <div class="row">
+       <div class="col-xs-6">
+       
+         <div class="clearfix m-b">
+            <a href="#" class="pull-left thumb m-r" id="proPicUrl"> </a> 
+            <div class="clear">
+               <div class="h4 m-t-xs m-b-xs" id="fullName"></div>
+              <a href="#" onclick="openNav2()"> <small class="text-muted"></small> Activity Feed </a>
+            </div>
+         </div>
+       
+       
+       </div>
+       
+       
+         <div class="col-xs-6">
+       
+         <div class="clearfix m-b">
+         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+           <a href="#" onclick="openNav1()" class="btn btn-s-md btn-white btn-rounded">66 Spotlights</a>
+           
+           
+           <ul class="nav navbar-nav ">
+   <li class="dropdown open">
+   <a href="#" class="btn btn-s-md btn-white btn-rounded dropdown-toggle dker" data-toggle="dropdown" style="padding: 7px;margin-right: 8px;">3 Sent to</a>
+       <ul class="dropdown-menu animated fadeInLeft" style="    width: 300px;">
+         <li> <a href="#" class="thumb-sm pull-left m-r-sm"> </a><a href="#" class="clear"> <small class="pull-right">17/09/2017</small> <strong class="block">Restroom Break</strong>  </a> </li>
+         <li class="divider"></li>
+          <li> <a href="#" class="thumb-sm pull-left m-r-sm"> </a><a href="#" class="clear"> <small class="pull-right">28/10/2017</small> <strong class="block">Brain Break</strong>  </a> </li>
+         <li class="divider"></li>
+          <li> <a href="#" class="thumb-sm pull-left m-r-sm"> </a><a href="#" class="clear"> <small class="pull-right">02/11/2017</small> <strong class="block">Meeting</strong>  </a> </li>
+         <li class="divider"></li>
+               
+               
+               
+               </ul>
+   </li>
+</ul> 
+           
+           
+           
+           
+           
+           
+           
+           
+          
+         </div>
+       
+       <div class="clearfix m-b">
+         
+        
+        <ul class="nav navbar-nav ">
+   <li class="dropdown open">
+   <a href="#" class="btn btn-s-md btn-white btn-rounded dropdown-toggle dker" data-toggle="dropdown" style="padding: 7px;margin-right: 6px;">2 Notes</a>
+       <ul class="dropdown-menu animated fadeInLeft" style="    width: 300px;">
+         <li> <a href="#" class="thumb-sm pull-left m-r-sm"> </a><a href="#" class="clear"> <small class="pull-right">17/09/2017</small> <strong class="block">History</strong><br><small>Columbus “discovered” America. </small>  </a> </li>
+         <li class="divider"></li>
+          <li> <a href="#" class="thumb-sm pull-left m-r-sm"> </a><a href="#" class="clear"> <small class="pull-right">28/10/2017</small> <strong class="block">Algibra I</strong><br> <small>Algebra is one of the broad parts of mathematics.</small> </a> </li>
+         <li class="divider"></li>
+              </ul>
+   </li>
+</ul> 
+
+
+ <ul class="nav navbar-nav ">
+   <li class="dropdown open">
+   <a href="#" class="btn btn-s-md btn-white btn-rounded dropdown-toggle dker" data-toggle="dropdown" style="padding: 7px;margin-right: 6px;">1 Absence</a>
+       <ul class="dropdown-menu animated fadeInLeft" style="    width: 300px;">
+         <li> <a href="#" class="thumb-sm pull-left m-r-sm"> </a><a href="#" class="clear"> <small class="pull-right">12/10/2017</small> <strong class="block">Fever</strong>  </a> </li>
+             </ul>
+   </li>
+</ul> 
+           
+         </div>
+       </div>
+      </div>
+      
+      
+       
+         <div class="panel wrapper">
+            <div class="row">
+               <div class="col-xs-2"> <a href="#"> <span class="m-b-xs h4 block">A</span> <small class="text-muted">Algibra I</small> </a> </div>
+               <div class="col-xs-2"> <a href="#"> <span class="m-b-xs h4 block">A</span> <small class="text-muted">Physics</small> </a> </div>
+               <div class="col-xs-2"> <a href="#"> <span class="m-b-xs h4 block">B</span> <small class="text-muted">English</small> </a> </div>
+               <div class="col-xs-2"> <a href="#"> <span class="m-b-xs h4 block">B</span> <small class="text-muted">History</small> </a> </div>
+               <div class="col-xs-2"> <a href="#"> <span class="m-b-xs h4 block">A</span> <small class="text-muted">Art</small> </a> </div>
+             <div class="col-xs-2"> <a href="#"> <span class="m-b-xs h4 block">B</span> <small class="text-muted">Algibra II</small> </a> </div>
+            
+            </div>
+         </div>
+         <div>
+         
+         
+         
+         
+         
+         
+         
+         <div class="row">
+         <div class="col-xs-12" style="margin-bottom:15px;">
+            <small class="text-uc text-xs text-muted">INTERESTS</small> 
+            </div>
+            
+            <div class="col-xs-4">
+            <article class="media">
+   <a class="pull-left thumb m-t-xs"> <img src="images/music.jpg"> </a> 
+   <div class="media-body">
+      <a href="#" class="font-semibold">Music</a> 
+      <div class="text-xs block m-t-xs"><i class="fa fa-comment-o"></i> 1 comments</div>
+   </div>
+</article>
+            
+  </div>          
+            
+            
+            
+             <div class="col-xs-4">
+            <article class="media">
+   <a class="pull-left thumb m-t-xs"> <img src="images/books.jpg"> </a> 
+   <div class="media-body">
+      <a href="#" class="font-semibold">Books</a> 
+      <div class="text-xs block m-t-xs"><i class="fa fa-comment-o"></i> 2 comments</div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   </div>
+</article>
+            
+  </div>          
+           
+           
+           
+              <div class="col-xs-4">
+            <article class="media">
+   <a class="pull-left thumb m-t-xs"> <img src="images/food.jpg"> </a> 
+   <div class="media-body">
+      <a href="#" class="font-semibold">Cooking</a> 
+      <div class="text-xs block m-t-xs"><i class="fa fa-comment-o"></i> 1 comments</div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   </div>
+</article>
+            
+  </div>          
+           
+           
+           
+           
+           </div>
+           
+           
+           
+             
+                        <div class="line"></div>
+            
+            
+            
+            
+            
+            
+         <div class="row">
+         <div class="col-xs-12" style="margin-bottom:15px;">
+            <small class="text-uc text-xs text-muted">learning activities</small>
+            </div>
+
+
+
+
+ <div class="col-xs-4">
+<div class="text-center wrapper lter hidden-vertical " style="background-color: #5c677c;color:#fff"> <div class="inline"> <div class="easypiechart easyPieChart" data-percent="94" data-line-width="8" data-track-color="#3d4452" data-bar-color="#80c740" data-scale-color="#545e70" data-loop="false" data-size="120" style="width: 120px; height: 120px; line-height: 120px;"> <span class="h2">94</span>% <div class="easypie-text">Visual</div> <canvas width="120" height="120"></canvas></div> </div> </div>
+</div>
+
+
+
+ <div class="col-xs-4">
+<div class="text-center wrapper lter hidden-vertical " style="background-color: #5c677c;color:#fff"> <div class="inline"> <div class="easypiechart easyPieChart" data-percent="40" data-line-width="8" data-track-color="#3d4452" data-bar-color="#80c740" data-scale-color="#545e70" data-loop="false" data-size="120" style="width: 120px; height: 120px; line-height: 120px;"> <span class="h2">40</span>% <div class="easypie-text">Auditorial</div> <canvas width="120" height="120"></canvas></div> </div> </div>
+</div>
+
+
+
+ <div class="col-xs-4">
+<div class="text-center wrapper lter hidden-vertical " style="background-color: #5c677c;color:#fff"> <div class="inline"> <div class="easypiechart easyPieChart" data-percent="0" data-line-width="8" data-track-color="#3d4452" data-bar-color="#80c740" data-scale-color="#545e70" data-loop="false" data-size="120" style="width: 120px; height: 120px; line-height: 120px;"> <span class="h2">0</span>% <div class="easypie-text">Tactile</div> <canvas width="120" height="120"></canvas></div> </div> </div>
+</div>
+
+
+
+
+            <div class="line"></div>
+                     </div>
+      </div>
+  
+</section>
+				
+
+				
+				
+				
+				</div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" 
+                     data-dismiss="modal" Style="border:none;background-color:#00c6c1">OK
+                  </button>
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      
+      
+      
+         <div class="modal fade" id="noClassModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body" id="modalAttendBoday">
+                  <br><br>
+                  <center>
+                     <div class="fa fa-warning" style="font-size:100px;"></div>
+                     <br>
+                     <div style="font-size:20px;" >Your class is not scheduled @ this time!!<br>Do you want to start manually??</div>
+                  </center>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" 
+                     data-dismiss="modal">No
+                  </button>
+                  <button type="button" class="btn btn-primary" Style="border:none;background-color:#00c6c1" onclick="startManually()"
+                     >Yes
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>   
+      
+      
+      
+      
+            <div   class="modal fade" id="addAssignmentModal" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" 
+                     data-dismiss="modal" aria-hidden="true">
+                  &times;
+                  </button>
+                  <br>
+                  <div style="float:right;" ><img src="images/logo.png" Style="height:40px" alt="scale"></div>
+                  <br><br>
+               </div>
+               <div class="modal-body">
+                  
+                  
+                  
+                    <form class="bs-example form-horizontal"  id="insert_assignment_form" method="post" action="#" style="margin:30px 50px 30px 50px;" data-validate="parsley">
+                                                  
+                                                   <div class="form-group">
+                                                      <label class="col-lg-12">Enter Assignment Task</label> 
+                                                      <div class="col-lg-12"> 
+                                                         <input  type="text" id="ins_task" class="form-control" placeholder="Enter Assignment Task and Click Submit" data-rangelength="[4,30]"  data-required="true">
+                                                      </div>
+                                                       <label class="col-lg-12" style="color:#00c6c1;display:none" id="assignSuccess">Assignment Added..</label> 
+                                                      
+                                                       <div class="col-lg-12" id="assignLoading" style="display:none"> 
+                                                      <center><img src="images/load_dribbble.gif" style="height:100px;"></center> 
+                                                      </div>
+                                                      
+                                                      
+                                                   </div>
+                                                   
+                                               
+                  
+                  
+                  
+                  
+                  
+               </div>
+               <div class="modal-footer">
+                  <div style="float:left;"> 
+                  </div>
+                  <a href="#" class="btn btn-white" data-dismiss="modal">Cancel</a>
+                  <button type="submit" Style="border:none;background-color:#00c6c1" class="btn btn-primary"  id="insertAssgnSubmit">
+                  Submit
+                  </button>
+               </div>
+               
+                </form>
+            </div>
+            <!-- /.modal-content -->
+         </div>
+         <!-- /.modal --> 
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  <script src="js/app.v2.js"></script>
+  <script src="js/fuelux/fuelux.js"></script>
+  <script src="js/canvasjs.min.js"></script>
+       <script src="js/parsley/parsley.min.js"></script>
+      <script type="text/javascript" src="js/Controllers/sideBarController.js"></script>
+         <script type="text/javascript" src="js/Controllers/elementController.js"></script>
+      <script type="text/javascript" src="js/Controllers/profileController.js"></script>
+
+
+   </body>
+</html>

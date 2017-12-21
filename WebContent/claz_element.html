@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>CyberClaz | Claz Element</title>
+      <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+     
+     	 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link rel="icon" href="favicon.ico" type="image/x-icon">	
+     
+     
+      <!-- CSS  -->
+      <link rel="stylesheet" href="css/app.v2.css" type="text/css" />
+         <link rel="stylesheet" href="css/pricetable/master.css" type="text/css" />
+         <link rel="stylesheet" href="css/pricetable/reset.css" type="text/css" />
+            <link rel="stylesheet" href="css/app.v2.css" type="text/css" />
+      <link rel="stylesheet" href="css/font.css" type="text/css" cache="false" />
+      <link rel="stylesheet" href="js/fuelux/fuelux.css" type="text/css" />
+
+      <!-- JS -->
+      <script src="js/google/jquery.min.js"></script> 
+      <script src="js/google/jquery-ui.js"></script>
+      <script type="text/javascript" src="js/jason_parser.js"></script>
+   
+      <script src="js/Controllers/webServerService.js"></script>
+   
+
+<style>
+
+/*--------do not copy start------*/
+.cc-dummy-wrap {
+	margin-top:200px;
+	margin-bottom:200px;
+}
+
+/*--------do not copy End-------*/
+.cc-icon-wrap {
+	position:relative;
+}
+.cc-icon {
+	border-radius: 64%;
+    width: 47px;
+    height: auto;
+    margin: auto;
+    border: 1px solid #ffffff;
+	-webkit-box-shadow: 0px 0px 20px -5px rgba(199,199,199,1);
+	-moz-box-shadow: 0px 0px 20px -5px rgba(199,199,199,1);
+	box-shadow: 0px 0px 20px -5px rgba(199,199,199,1);
+}
+@media only screen and (max-width : 767px) {
+	.cc-sm-layer-start , .cc-sm-layer {
+		margin-bottom:20px;
+	}
+
+}
+@media only screen and (min-width : 768px) {
+	.cc-sm-no-pad {
+		padding:0;
+	}
+	.cc-sm-layer {
+		margin-left:-16%;
+	}
+	.cc-sm-layer-start {
+		margin-left:15%;
+	}
+}
+@media only screen and (min-width : 992px) {
+	.cc-sm-layer {
+		margin-left:-16%;
+	}
+	.cc-sm-layer-start {
+		margin-left:12%;
+	}
+}
+
+
+</style>
+
+      <style>
+
+
+.sidenav1 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav1 h6{
+color:#000;
+}
+
+.sidenav1 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+   
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav1 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav1 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav1 {padding-top: 15px;}
+  .sidenav1 a {font-size: 18px;}
+}
+</style>
+
+   </head>
+   <body>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+      <section class="hbox stretch">
+             <aside class="bg-black dk aside-sm nav-vertical only-icon" id="nav">
+            <section class="vbox" >
+               <header class="dker nav-bar" > <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="#nav"> <i class="fa fa-bars"></i> </a> <a href="javascript:void(0)" class="nav-brand" style=""><img src="images/login-logo.png"  id="proImg" style="width:60px;"></a> <a onclick ="signout()" class="btn btn-link visible-xs" > <i class="fa fa-power-off"></i> </a>  </header>
+               <footer class="footer lt hidden-xs text-center"> <a href="javascript:void(0)" onclick ="signout()"  class="btn btn-sm btn-link"> <i class="fa fa-power-off"></i> <br>Exit </a> </footer>
+               <section>
+           
+                 <!-- user --> 
+                  <div class="lt nav-user hidden-xs pos-rlt" style="    margin-top: -50px;">
+                     <div class="nav-avatar pos-rlt" id="picturePanel">
+                       
+                      
+                     </div>
+                  </div>
+                  <!-- / user --> <!-- nav --> 
+                  <nav class="nav-primary hidden-xs">
+                     <ul class="nav" id="sideBar">
+                       
+                
+                       </ul>
+                  </nav>
+                  <!-- / nav --> 
+               </section>
+            </section>
+         </aside>
+   
+          
+         <!-- .vbox --> 
+         <section id="content">
+            <section class="hbox stretch bg-white-only">
+               <!-- .aside --> 
+               <aside class="">
+                  <section class="vbox">
+                     <header class="header bg-white pos-rlt navbar navbar-default show" Style="border-bottom:1px solid #F2F2F2;">
+                        <span class="arrow left" style="border-right-color:#fff"></span> 
+                        <div class="collapse navbar-collapse pull-in">
+                           <img src="images/logo.png" height="50px">
+                           <ul class="nav navbar-nav navbar-right">
+                              <li class="hidden-xs">
+                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                    <form name="Tick">
+                                       <b>
+                                          <div  class="fa fa-clock-o text-muted" style="font-size:20px;"></div>
+                                          &nbsp;&nbsp;<input type="text" size="11" name="Clock" style="font-size:15px;border:none; background: transparent;" readonly>
+                                       </b>
+                                    </form>
+                                 </a>
+                              </li>
+                              
+                              
+                              
+                              
+                                            <li class="dropdown">
+            <a href="#" class="dropdown-toggle  dker" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left m-t-n-xs m-r-xs" id="picturePanelNav"> </span> <span id="namePanelNav"></span> <b class="caret"></b> </a> 
+            <ul class="dropdown-menu animated fadeInLeft">
+         
+               <li> <a href="profile.html"><i class="fa fa-user"></i>&nbsp;&nbsp;Profile</a> </li>
+              
+               <li> <a href="javascript:void(0)" onclick ="signout()"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a> </li>
+            </ul>
+         </li>
+                              
+                              
+                              
+                              
+                           </ul>
+                        </div>
+                     </header>
+                     <section>
+                  
+       
+       
+  
+                         <section class="hbox stretch">
+                    
+                    
+                    
+                    
+                    
+        
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                     <!-- .aside --> 
+                     <aside class="aside-lg bg-light">
+                        <div class="wrapper">
+                           
+                           
+<div class="col-sm-12">
+
+
+<h2 id="dateAndYear" style="color:#03b2ae"></h2>
+
+ <h5 class="font-semibold">Today</h5>
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   <div class="line line-dashed"></div>
+   <ul class="list-unstyled m-b-lg">
+      <li>
+      
+      <h5 style="font-size:15px;">Assembly</h6>
+         <p>Pep Rally at 2pm. Go Cats!</p>
+         <div class="line" style="border-color:#ccd1cd"></div>
+      </li>
+	  
+	  
+	  <li>
+      <h5 style="font-size:15px;">Weather</h6>
+         <p>Inclement weather is forecasted for tomorrow, parents have been notified for potential closure.</p>
+         <div class="line" style="border-color:#ccd1cd"></div>
+      </li>
+	  
+	  
+	  <li>
+      <h5 style="font-size:15px;">Healthy Habits Food Club Meeting</h6>
+         <p>There will be a Healthy Habits Food Club meeting at 2 PM.</p>
+        <div class="line" style="border-color:#ccd1cd"></div>
+      </li>
+	  
+	  <li>
+      <h5 style="font-size:15px;">Teacher's Meeting</h6>
+         <p>TSchool-wide teacher meting to review code of conduct at 4 PM.</p>
+         <div class="line" style="border-color:#ccd1cd"></div>
+      </li>
+      
+   </ul>
+   
+   
+
+</div>                           
+                           
+                           
+                         </div>
+                     </aside>
+                     <!-- /.aside --> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                     <!-- .aside --> 
+                     <aside>
+                        <section class="vbox">
+                           <section class="scrollable wrapper">
+                             
+            
+                           
+                           
+                           
+                             
+                             
+             <div class="row"  style="margin-top:10px;">                    
+                             
+                             
+      <div class="col-lg-4"">                       
+           <h5>9:00 AM - 10.30 AM  </h5>                
+
+		<a href="claz_element_spotlight.html?class=1">
+		<div id="tableContainer">
+		
+			<div class="tableCell">
+				<div class="tableHeading1">
+					<h5>1st Hour</h5>
+					<h3>Algibra I</h3>
+					<p>Linear Functions</p>
+					
+					<div class="price1 priceContainer">
+						<p>94<sup>%</sup></p>
+					
+					</div> <!-- end price1 -->
+				</div> <!-- end tableHeading -->
+			</div>
+			
+	
+		
+			
+		
+			
+			<div class="cl"><!-- --></div>
+				
+			<table class="pricingTableContent">
+				<tr class="signUpRow">
+					<td></td>
+					
+				</tr>
+
+				<!-- Table Content -->
+				<tr>
+					<td>Spotlight</td>
+					
+				</tr>
+
+				
+
+
+<tr>
+		<td>		
+			<div class="row" style="margin-left:50px;">
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer-start">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a5.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a8.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a9.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a1.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+            </div>
+				
+			</td>	
+</tr>
+
+
+
+<tr >
+					<td><h4><strong>4/30</strong></h4></td>
+					
+				</tr>
+
+
+
+
+
+				
+				
+				<!-- Table Footer -->
+				<tfoot>
+					<tr class="altRow">
+						<td>
+							
+							<span>Objectives</span>
+							
+							
+							<section class="panel" id="progressbar">
+
+   <ul class="list-group">
+ 
+      <li class="list-group-item">
+        <div class="progress progress-sm progress-striped active">
+        <div class="tooltip fade bottom in" role="tooltip" id="tooltip595543" style="top: 18px; left: 120.5px; display: block;">
+               <div class="tooltip-arrow"></div>
+               <div class="tooltip-inner">94% Covered</div>
+            </div>
+            <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="94%" style="width: 94%;background-color:#0f9bac" aria-describedby="tooltip595543" ></div>
+            
+         </div>
+         
+      </li>
+     
+   </ul>
+</section>
+							
+						</td>
+
+					
+
+						
+					</tr>
+				</tfoot>
+			</table>
+			
+		</div> <!-- end tableContainer --></a>
+
+</div>
+                             
+                             
+                             
+                             
+                             
+        
+        
+        
+        
+        
+        
+        
+        
+              <div class="col-lg-4"">                       
+             <h5>10.30 AM - 12.00 NN  </h5>                 
+                             
+<a href="claz_element_spotlight.html?class=2">
+		
+		<div id="tableContainer">
+		
+			<div class="tableCell">
+				<div class="tableHeading2">
+					<h5>2nd Hour</h5>
+					<h3>Geometry</h3>
+					<p>Angles > Perpendicular Lines</p>
+					
+					<div class="price1 priceContainer">
+						<p>83<sup>%</sup></p>
+					
+					</div> <!-- end price1 -->
+				</div> <!-- end tableHeading -->
+			</div>
+			
+	
+		
+			
+		
+			
+						
+			<div class="cl"><!-- --></div>
+				
+			<table class="pricingTableContent">
+				<tr class="signUpRow">
+					<td></td>
+					
+				</tr>
+
+				<!-- Table Content -->
+				<tr>
+					<td>Spotlight</td>
+					
+				</tr>
+
+				
+
+
+<tr>
+		<td>		
+			<div class="row" style="margin-left:50px;">
+                   <div class="col-sm-3 cc-sm-no-pad cc-sm-layer-start">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a5.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a8.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a9.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                 
+                   
+            </div>
+				
+			</td>	
+</tr>
+
+
+
+<tr >
+					<td><h4><strong>3/30</strong></h4></td>
+					
+				</tr>
+
+
+
+
+
+				
+				
+				<!-- Table Footer -->
+				<tfoot>
+					<tr class="altRow">
+						<td>
+							
+							<span>Objectives</span>
+							
+							
+							<section class="panel" id="progressbar">
+
+   <ul class="list-group">
+ 
+      <li class="list-group-item">
+        <div class="progress progress-sm progress-striped active">
+        <div class="tooltip fade bottom in" role="tooltip" id="tooltip595543" style="top: 18px; left: 100.5px; display: block;">
+               <div class="tooltip-arrow"></div>
+               <div class="tooltip-inner">83% Covered</div>
+            </div>
+            <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="83%" style="width: 83%;background-color:#717171" aria-describedby="tooltip595543" ></div>
+            
+         </div>
+         
+      </li>
+     
+   </ul>
+</section>
+							
+						</td>
+
+					
+
+						
+					</tr>
+				</tfoot>
+			</table>
+			
+		</div> <!-- end tableContainer --></a>
+
+</div>
+           
+        
+        
+        
+        
+        
+     <div class="col-lg-4">                       
+                             
+             <h5>12.00 NN - 1.30 PM </h5>                  
+<a href="claz_element_spotlight.html?class=3">
+		
+		<div id="tableContainer">
+		
+			<div class="tableCell">
+				<div class="tableHeading3">
+					<h5>3rd Hour</h5>
+					<h3>Algibra II</h3>
+					<p>Complex Functions</p>
+					
+					<div class="price1 priceContainer">
+						<p>90<sup>%</sup></p>
+					
+					</div> <!-- end price1 -->
+				</div> <!-- end tableHeading -->
+			</div>
+			
+	
+		
+			
+		
+			
+						
+			<div class="cl"><!-- --></div>
+				
+			<table class="pricingTableContent">
+				<tr class="signUpRow">
+					<td></td>
+					
+				</tr>
+
+				<!-- Table Content -->
+				<tr>
+					<td>Spotlight</td>
+					
+				</tr>
+
+				
+
+
+<tr>
+		<td>		
+			<div class="row" style="margin-left:50px;">
+                     <div class="col-sm-3 cc-sm-no-pad cc-sm-layer-start">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a5.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a8.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a9.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a1.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a8.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                   
+                   
+            </div>
+				
+			</td>	
+</tr>
+
+
+
+<tr >
+					<td><h4><strong>5/30</strong></h4></td>
+					
+				</tr>
+
+
+
+
+
+				
+				
+				<!-- Table Footer -->
+				<tfoot>
+					<tr class="altRow">
+						<td>
+							
+							<span>Objectives</span>
+							
+							
+							<section class="panel" id="progressbar">
+
+   <ul class="list-group">
+ 
+      <li class="list-group-item">
+        <div class="progress progress-sm progress-striped active">
+        <div class="tooltip fade bottom in" role="tooltip" id="tooltip595543" style="top: 18px; left: 100.5px; display: block;">
+               <div class="tooltip-arrow"></div>
+               <div class="tooltip-inner">90% Covered</div>
+            </div>
+            <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="90%" style="width: 90%;background-color:#ffbc5a" aria-describedby="tooltip595543" ></div>
+            
+         </div>
+         
+      </li>
+     
+   </ul>
+</section>
+							
+						</td>
+
+					
+
+						
+					</tr>
+				</tfoot>
+			</table>
+			
+		</div> <!-- end tableContainer --></a>
+
+</div>    
+        
+        
+      </div>  
+        
+   <!-- -     Lunch           -->                          
+                             
+                             
+                        <div class="row"  style="margin-top:50px;">   
+                             
+                   <div class="col-lg-12" style="margin-bottom:50px;">                       
+                             
+                   <h5>1.30 PM - 2.30 PM </h5>             
+<a href="#">
+		
+		<div id="tableContainer" style="background-color:#717171;height:150px;">
+		
+			
+			
+	<h4 style="margin-top:50px;color:#fff"><center>Lunch Break</center></h4>
+		
+			
+			
+		</div> <!-- end tableContainer --></a>
+
+</div>    
+           <div class="col-lg-4">                       
+                             
+   <h5> 2.30 PM - 4.00 PM </h5>                             
+<a href="claz_element_spotlight.html?class=4">
+		
+		<div id="tableContainer">
+		
+			<div class="tableCell">
+				<div class="tableHeading1">
+					<h5>4th Hour</h5>
+					<h3>History</h3>
+					<p>First World War</p>
+					
+					<div class="price1 priceContainer">
+						<p>94<sup>%</sup></p>
+					
+					</div> <!-- end price1 -->
+				</div> <!-- end tableHeading -->
+			</div>
+			
+	
+		
+			
+		
+			
+			<div class="cl"><!-- --></div>
+				
+			<table class="pricingTableContent">
+				<tr class="signUpRow">
+					<td></td>
+					
+				</tr>
+
+				<!-- Table Content -->
+				<tr>
+					<td>Spotlight</td>
+					
+				</tr>
+
+				
+
+
+<tr>
+		<td>		
+			<div class="row" style="margin-left:50px;">
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer-start">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a5.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a8.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a9.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a1.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+            </div>
+				
+			</td>	
+</tr>
+
+
+
+<tr >
+					<td><h4><strong>4/30</strong></h4></td>
+					
+				</tr>
+
+
+
+
+
+				
+				
+				<!-- Table Footer -->
+				<tfoot>
+					<tr class="altRow">
+						<td>
+							
+							<span>Objectives</span>
+							
+							
+							<section class="panel" id="progressbar">
+
+   <ul class="list-group">
+ 
+      <li class="list-group-item">
+        <div class="progress progress-sm progress-striped active">
+        <div class="tooltip fade bottom in" role="tooltip" id="tooltip595543" style="top: 18px; left: 120.5px; display: block;">
+               <div class="tooltip-arrow"></div>
+               <div class="tooltip-inner">94% Covered</div>
+            </div>
+            <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="94%" style="width: 94%;background-color:#0f9bac" aria-describedby="tooltip595543" ></div>
+            
+         </div>
+         
+      </li>
+     
+   </ul>
+</section>
+							
+						</td>
+
+					
+
+						
+					</tr>
+				</tfoot>
+			</table>
+			
+		</div> <!-- end tableContainer --></a>
+
+</div>    
+           <div class="col-lg-4">                       
+                             
+    <h5>4.00 PM - 5.30 PM</h5>                          
+<a href="claz_element_spotlight.html?class=5">
+		
+		<div id="tableContainer">
+		
+			<div class="tableCell">
+				<div class="tableHeading2">
+					<h5>5th Hour</h5>
+					<h3>Basic Science</h3>
+					<p>Human Biology</p>
+					
+					<div class="price1 priceContainer">
+						<p>83<sup>%</sup></p>
+					
+					</div> <!-- end price1 -->
+				</div> <!-- end tableHeading -->
+			</div>
+			
+	
+		
+			
+		
+			
+						
+			<div class="cl"><!-- --></div>
+				
+			<table class="pricingTableContent">
+				<tr class="signUpRow">
+					<td></td>
+					
+				</tr>
+
+				<!-- Table Content -->
+				<tr>
+					<td>Spotlight</td>
+					
+				</tr>
+
+				
+
+
+<tr>
+		<td>		
+			<div class="row" style="margin-left:50px;">
+                   <div class="col-sm-3 cc-sm-no-pad cc-sm-layer-start">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a5.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a8.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 cc-sm-no-pad cc-sm-layer">
+                        <div class="cc-icon-wrap">
+                            <img src="images/profilepic/a9.png" class="img-responsive cc-icon" alt="" />
+                        </div>
+                    </div>
+                 
+                   
+            </div>
+				
+			</td>	
+</tr>
+
+
+
+<tr >
+					<td><h4><strong>3/30</strong></h4></td>
+					
+				</tr>
+
+
+
+
+
+				
+				
+				<!-- Table Footer -->
+				<tfoot>
+					<tr class="altRow">
+						<td>
+							
+							<span>Objectives</span>
+							
+							
+							<section class="panel" id="progressbar">
+
+   <ul class="list-group">
+ 
+      <li class="list-group-item">
+        <div class="progress progress-sm progress-striped active">
+        <div class="tooltip fade bottom in" role="tooltip" id="tooltip595543" style="top: 18px; left: 100.5px; display: block;">
+               <div class="tooltip-arrow"></div>
+               <div class="tooltip-inner">83% Covered</div>
+            </div>
+            <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="83%" style="width: 83%;background-color:#717171" aria-describedby="tooltip595543" ></div>
+            
+         </div>
+         
+      </li>
+     
+   </ul>
+</section>
+							
+						</td>
+
+					
+
+						
+					</tr>
+				</tfoot>
+			</table>
+			
+		</div> <!-- end tableContainer --></a>
+
+</div>    
+                     
+                             
+    </div>                         
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                           </section>
+                        </section>
+                     </aside>
+                     <!-- /.aside -->
+                  </section>
+       
+       
+       
+       
+       
+                                
+                     </section>
+                  </section>
+               </aside>
+               <!-- /.aside --> 
+            </section>
+            <a href="javascript:void(0)" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a> 
+         </section>
+         <!-- /.vbox --> 
+      </section>
+      
+      
+      
+      
+      
+      
+
+      
+ 
+      
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+            <div class="modal fade" id="noClassModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body" id="modalAttendBoday">
+                  <br><br>
+                  <center>
+                     <div class="fa fa-warning" style="font-size:100px;"></div>
+                     <br>
+                     <div style="font-size:20px;" >Your class is not scheduled @ this time!!<br>Do you want to start manually??</div>
+                  </center>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" 
+                     data-dismiss="modal">No
+                  </button>
+                  <button type="button" class="btn btn-primary" Style="border:none;background-color:#00c6c1" onclick="startManually()"
+                     >Yes
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  <script src="js/app.v2.js"></script>
+  <script src="js/fuelux/fuelux.js"></script>
+       <script src="js/parsley/parsley.min.js"></script>
+      <script type="text/javascript" src="js/Controllers/sideBarController.js"></script>
+      <script type="text/javascript" src="js/Controllers/initialiseElementController.js"></script>
+      <script type="text/javascript" src="js/Controllers/profileController.js"></script>
+<!-- Flot --> <script src="js/charts/jquery.flot.min.js" cache="false"></script> 
+<script src="js/charts/jquery.flot.tooltip.min.js" cache="false"></script> 
+<script src="js/charts/jquery.flot.resize.js" cache="false"></script> 
+<script src="js/charts/jquery.flot.orderBars.js" cache="false"></script> 
+<script src="js/charts/jquery.flot.pie.min.js" cache="false"></script> 
+<script src="js/charts/demo.js" cache="false"></script>
+   </body>
+</html>

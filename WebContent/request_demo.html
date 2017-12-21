@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Request Demo</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="registration/style.css">
+  <link rel="stylesheet" href="registration/set1.css">
+
+ 
+</head>
+
+<body>
+<div id="main-wrapper">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 left-side">
+        <header style="height:80px;position: absolute;
+bottom: 0px;">
+         <img src="images/logo.png" style="height:80px" >
+        </header>
+      </div>
+      
+      
+      <div class="col-md-6 right-side" id="mainWrap">
+       <form role="form" action="javascript:void(0)"  id="reg_frm" method="post">
+       
+       
+       <div class="col-md-12">
+       
+       <div class="col-md-4">
+      <img src="images/logo.png" style="height:55px;"> </div>
+      
+      <div class="col-md-8">
+      <h2 style="color:#00c6c1">REQUEST CYBERCLAZ DEMO</h2></div>
+      
+      </div>
+       
+       
+       
+       <div class="col-md-6">
+      
+        <span class="input input--hoshi">
+          <input class="input__field input__field--hoshi" type="text" id="fullname" data-required="true" data-type="digits" />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="firstname">
+            <span class="input__label-content input__label-content--hoshi">Full Name</span>
+          </label>
+        </span>
+        
+         <span class="input input--hoshi">
+          <input class="input__field input__field--hoshi" type="text" id="designation" data-required="true" data-type="digits" />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="lname">
+            <span class="input__label-content input__label-content--hoshi">Designation</span>
+          </label>
+        </span>
+        <span class="input input--hoshi">
+          <input class="input__field input__field--hoshi" type="text" id="email" data-required="true" data-type="email" autocomplete="off" />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="email">
+            <span class="input__label-content input__label-content--hoshi">E-mail</span>
+          </label>
+        </span>
+       
+        
+        
+        
+        </div>
+        
+        
+        
+        
+        
+               <div class="col-md-6">
+      
+        <span class="input input--hoshi">
+          <input class="input__field input__field--hoshi" type="text" id="company" data-required="true" data-type="digits"/>
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="mname">
+            <span class="input__label-content input__label-content--hoshi">Company Name</span>
+          </label>
+        </span>
+        
+        
+        <span class="input input--hoshi">
+          <input class="input__field input__field--hoshi" type="text" id="country" data-required="true" data-type="digits" />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="username">
+            <span class="input__label-content input__label-content--hoshi">Country Name</span>
+          </label>
+        </span>
+        
+        
+        
+        <span class="input input--hoshi">
+          <input class="input__field input__field--hoshi" type="text" id="mobile" data-required="true" data-type="number" data-rangelength="[10,15]" autocomplete="off"/>
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="mobile">
+            <span class="input__label-content input__label-content--hoshi">Mobile Number</span>
+          </label>
+        </span>
+      
+        
+
+        
+        
+        
+        </div>
+        
+        
+  
+        
+        
+        
+        <div class="cta">
+          <button class="btn btn-primary pull-right" type="submit">
+            SUBMIT
+          </button>
+         <span><br><a href="index.html"><< Back to login</a></span>
+        </div>
+       
+       
+       </form>
+        
+        
+        
+        
+        
+      <div id="imageLoader" style="display:none"> <center><img src="images/load_dribbble.gif" style="height:150px;margin-top:40px;"></center></div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+      
+      
+      
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </div>
+
+</div> <!-- end #main-wrapper -->
+
+<!-- Scripts -->
+   <script src="js/1.11.1/jquery.min.js"></script>
+   <script src="js/Controllers/demoController.js"></script>
+      <script src="js/parsley/parsley.min.js"></script>
+<script src="https://dcrazed.com/html/signup-pack/js/scripts.js"></script>
+<script src="https://dcrazed.com/html/signup-pack/js/classie.js"></script>
+<script>
+  (function() {
+    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+    if (!String.prototype.trim) {
+      (function() {
+        // Make sure we trim BOM and NBSP
+        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+        String.prototype.trim = function() {
+          return this.replace(rtrim, '');
+        };
+      })();
+    }
+
+    [].slice.call( document.querySelectorAll( 'select.input__field' ) ).forEach( function( inputEl ) {
+      // in case the input is already filled..
+      if( inputEl.value.trim() !== '' ) {
+        classie.add( inputEl.parentNode, 'input--filled' );
+      }
+
+      // events:
+      inputEl.addEventListener( 'focus', onInputFocus );
+      inputEl.addEventListener( 'blur', onInputBlur );
+    } );
+
+    
+    [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+        // in case the input is already filled..
+        if( inputEl.value.trim() !== '' ) {
+          classie.add( inputEl.parentNode, 'input--filled' );
+        }
+
+        // events:
+        inputEl.addEventListener( 'focus', onInputFocus );
+        inputEl.addEventListener( 'blur', onInputBlur );
+      } );
+    
+    
+    
+    
+    
+    
+    function onInputFocus( ev ) {
+      classie.add( ev.target.parentNode, 'input--filled' );
+    }
+
+    function onInputBlur( ev ) {
+      if( ev.target.value.trim() === '' ) {
+        classie.remove( ev.target.parentNode, 'input--filled' );
+      }
+    }
+  })();
+</script>
+
+</body>
+</html>

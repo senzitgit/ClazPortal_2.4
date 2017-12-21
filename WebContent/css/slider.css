@@ -1,0 +1,449 @@
+
+.left1 {
+float: left;
+}
+.both {
+clear: both;
+}
+.file-upload-container {
+width:400px;
+border: 1px solid #efefef;
+padding:10px;
+border-radius: 6px;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+background: #fbfbfa;
+}
+.file-upload-override-button {
+position: relative;
+overflow: hidden;
+cursor: pointer;
+background-color:#00c6c1;
+}
+
+.file-upload-override-button:active {
+position:relative; top:1px;
+}
+.file-upload-button {
+position: absolute;
+height: 50px;
+top: -10px;
+left: -10px;
+cursor: pointer;
+opacity: 0;
+filter:alpha(opacity=0);
+}
+.file-upload-filename {
+margin-left: 10px;
+height: auto;
+padding: 8px;
+}
+
+
+
+
+.file-upload-override-button {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #00c6c1;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #00c6c1;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #528ecc;
+}
+
+
+
+
+
+
+
+
+
+
+
+.sidenav1 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav1 h6{
+color:#000;
+}
+
+
+
+.sidenav1 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav1 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav1 {padding-top: 15px;}
+  .sidenav1 a {font-size: 18px;}
+}
+
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav h6{
+color:#000;
+}
+
+
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.sidenav2 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav2 h6{
+color:#000;
+}
+
+
+
+.sidenav2 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav2 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav2 {padding-top: 15px;}
+  .sidenav2 a {font-size: 18px;}
+}
+
+.sidenav3 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav3 h6{
+color:#000;
+}
+
+
+
+.sidenav3 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav3 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav3 {padding-top: 15px;}
+  .sidenav3 a {font-size: 18px;}
+}
+
+
+
+
+
+
+
+
+
+
+.sidenav4 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav4 h6{
+color:#000;
+}
+
+
+
+.sidenav4 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav4 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav4 {padding-top: 15px;}
+  .sidenav4 a {font-size: 18px;}
+}
+
+
+
+
+
+
+.sidenav5 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav5 h6{
+color:#000;
+}
+
+
+
+.sidenav5 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav5 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav5 {padding-top: 15px;}
+  .sidenav5 a {font-size: 18px;}
+}
+
+
+
+
+.sidenav6 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav6 h6{
+color:#000;
+}
+
+
+
+.sidenav6 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav6 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav6 {padding-top: 15px;}
+  .sidenav6 a {font-size: 18px;}
+}
+
+
+
+.sidenav7 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav7 h6{
+color:#000;
+}
+
+
+
+.sidenav7 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav7 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav7 {padding-top: 15px;}
+  .sidenav7 a {font-size: 18px;}
+}
+
+
+
+
+
+.sidenav8 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   z-index: 5000;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:2px solid #00c6c1;
+}
+
+.sidenav8 h6{
+color:#000;
+}
+
+
+
+.sidenav8 a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav8 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:#0f9bac;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav8 {padding-top: 15px;}
+  .sidenav8 a {font-size: 18px;}
+}
+
+
+
+
+
+
+
+
+
