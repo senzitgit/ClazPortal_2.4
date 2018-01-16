@@ -12,8 +12,8 @@
 
 <%!	String requestToAppServer(String link,List<String> postData,HttpClient client){
 	
-	PostMethod method = new PostMethod("https://clazserver.mybluemix.net/cyberclaz/"+link);
-  //PostMethod method = new PostMethod("http://localhost:8081/CyberClazServer/cyberclaz/"+link);
+	//PostMethod method = new PostMethod("https://clazserver.mybluemix.net/cyberclaz/"+link);
+  PostMethod method = new PostMethod("http://192.168.10.50:8080/CyberClazServer/cyberclaz/"+link);
 	if(postData!=null)
 		for(int i=0;i<postData.size();i+=2){
 			
@@ -1247,6 +1247,12 @@ stopRecordJson.put("reminderNotes", reminderNotesArray);
 stopRecordJson.put("raiseHand", raiseHand);
 stopRecordJson.put("attendanceList", attendanceList);
 	    
+	    System.err.println("stopRecordJson.toString()"+stopRecordJson.toString());
+	    
+	    System.err.println("duration"+duration);
+	    
+	    System.err.println("scheduleId"+scheduleId);
+	    
 	    
 	    
 	    
@@ -1271,6 +1277,13 @@ stopRecordJson.put("attendanceList", attendanceList);
 	   postData.add("userId");
 	   String userName = (String)session.getAttribute("userId");
 	   postData.add(userName);
+	   
+	   
+	   
+	   
+	   System.err.println("userId"+userName);
+	    
+	    System.err.println("sessionID"+(String)session.getAttribute("userSessionId"));
 	   	
 		String serverResponse = requestToAppServer(link,postData,client);
    		out.println(serverResponse);

@@ -199,7 +199,7 @@ function formatDate(date) {
 
 function start_websocket() {
 
-    websocket = new WebSocket("wss://" + webSocketIp + "/socket/" + userId);
+    websocket = new WebSocket("ws://" + webSocketIp + "/socket/" + userId);
 
     websocket.onopen = function() {
         websocket.send("Claz Portal");
@@ -271,7 +271,8 @@ function parseResult(result) {
        addAttach.innerHTML = '<article id="chat-id-1" class="chat-item right"> <a href="javascript:void(0)" class="pull-right thumb-sm avatar"><img src="' + ProfilePicURL + '" class="img-circle"></a> <section class="chat-body" > <div class="panel bg bg-success text-sm m-b-none"  style="background-color:#00c6c1"> <div class="panel-body" style="height:30px;padding: 5px;"> <span class="arrow right" style="border-left-color:#00c6c1"></span>' + cur.name + '<a href="javascript:void(0)" onclick="openPopup(' + attachmentListFlag + ')"><div class="fa fa-eye" Style="font-size:15px;float:right;color:#fff"></div> </a>    <a href="' + cur.link + '" download><div class="fa fa-download" Style="font-size:15px;float:right;margin-right:20px;color:#fff"></div></a></div>  </div> <small class="text-muted"><i class="fa fa-paperclip"></i>&nbsp;&nbsp;Type : ' + cur.type + '</small> </section> </article>' + addAttach.innerHTML;
         
         
-        
+	 	  
+
         
         attachmentListFlag++;
         
@@ -283,7 +284,7 @@ function parseResult(result) {
         addLogs.innerHTML = '<article style="margin-right:10px;" id="chat-id-1" class="chat-item left"> <a href="javascript:void(0)" class="pull-left thumb-sm avatar"><img src="' + ProfilePicURL + '" class="img-circle"></a> <section class="chat-body"> <div class="panel text-sm m-b-none"> <div class="panel-body" style=" height: 35px;padding: 5px;background-color:#00c6c1;color:#fff; "> <span class="arrow left" style="border-right-color:#00c6c1;"></span><span style="font-size:12px; margin-top:-30px;">' + cur.name + ' File shared</span> </div> </div> <small class="text-muted"><i class="fa fa-check text-success"></i>' + cur.timestamp + '</small> </section> </article>' + addLogs.innerHTML;
 
         
-	  textToSpeechdata = textToSpeechdata + TeacherName +" shared a file with filename "+filename+" at"+cur.timestamp+". ";
+	  textToSpeechdata = textToSpeechdata + "Teacher shared a file with filename "+cur.name+" at"+cur.timestamp+". ";
 
         
         
@@ -310,7 +311,7 @@ function parseResult(result) {
             var addLogs = document.getElementById('addLogs');
             addLogs.innerHTML = '<article style="margin-right:10px;" id="chat-id-1" class="chat-item left"> <a href="javascript:void(0)" class="pull-left thumb-sm avatar"><img src="' + cur.profilePic + '" class="img-circle"></a> <section class="chat-body"> <div class="panel text-sm m-b-none"> <div class="panel-body" style=" height: 35px; padding: 5px;background-color:#00c6c1;color:#fff; "> <span class="arrow left" style="border-right-color:#00c6c1;"></span><span style="font-size:12px; margin-top:-30px;">' + cur.logText + '</span> </div> </div> <small class="text-muted"><i class="fa fa-check text-success"></i>' + cur.timestamp + '</small> </section> </article>' + addLogs.innerHTML;
        
-            
+            textToSpeechdata = textToSpeechdata + cur.logText +" "+ cur.timestamp +". ";
         
         } else {
 
@@ -344,6 +345,12 @@ function parseResult(result) {
             raiseHandDoubts.innerHTML = '<article id="' + cur.raiseHandText + '" style="" id="chat-id-1" class="chat-item left"> <a href="javascript:void(0)" class="pull-left thumb-sm avatar"><img src="' + cur.profilePic + '" class="img-circle"></a> <section class="chat-body"> <div class="panel text-sm m-b-none">    <div class="panel-body" style=" padding: 5px;background-color:#00c6c1;color:#fff; "> <span class="arrow left" style="border-right-color:#00c6c1"></span>' + cur.raiseHandText + ' <br>Answer : ' + cur.raiseHandAnswer + ' </div></div> <small class="text-muted"><i class="fa fa-circle text-success text-xs"></i> </small> &nbsp;Answered </section> </article>';
 
 
+            
+            
+            
+            textToSpeechdata = textToSpeechdata + user+" Asked A Question at "+cur.timestamp +". ";
+            textToSpeechdata = textToSpeechdata + "The question is "+question+". "; 
+  	            textToSpeechdata = textToSpeechdata + "The answer is "+answer+". ";  
 
         }
 
@@ -1207,7 +1214,11 @@ function attendClass() {
                                   	
                            var addLogs = document.getElementById('addLogs');
                             addLogs.innerHTML = '<article style="margin-right:10px;" id="chat-id-1" class="chat-item left"> <a href="javascript:void(0)" class="pull-left thumb-sm avatar"><img src="' + cur.profilePic + '" class="img-circle"></a> <section class="chat-body"> <div class="panel text-sm m-b-none"> <div class="panel-body" style="height: 35px; padding: 5px;background-color:#00c6c1;color:#fff; "> <span class="arrow left" style="border-right-color:#00c6c1;"></span><span style="font-size:12px; margin-top:-30px;">' + cur.logText + '</span> </div> </div> <small class="text-muted"><i class="fa fa-check text-success"></i>' + cur.timestamp + '</small> </section> </article>' + addLogs.innerHTML;
-                       } else {
+                            textToSpeechdata = textToSpeechdata + cur.logText +" "+ cur.timestamp +". ";
+                        
+                        
+                        
+                        } else {
 
                             var question = cur.raiseHandText;
                             var answer = cur.raiseHandAnswer;
@@ -1236,6 +1247,10 @@ function attendClass() {
                             var raiseHandDoubts = document.getElementById(raiseHandText);
                             raiseHandDoubts.innerHTML = '<article id="' + raiseHandText + '" style="" id="chat-id-1" class="chat-item left"> <a href="javascript:void(0)" class="pull-left thumb-sm avatar"><img src="' + Teachimage + '" class="img-circle"></a> <section class="chat-body"> <div class="panel text-sm m-b-none">    <div class="panel-body" style=" height: 35px;padding: 5px;background-color:#00c6c1;color:#fff; "> <span class="arrow left" style="border-right-color:#00c6c1"></span>' + raiseHandText + ' <br>Answer : ' + raiseHandAnswer + ' </div></div> <small class="text-muted"><i class="fa fa-circle text-success text-xs"></i> </small> &nbsp;Answered </section> </article>';
 
+                            
+                            textToSpeechdata = textToSpeechdata + user+" Asked A Question at"+ts+". ";
+                            textToSpeechdata = textToSpeechdata + "The question is "+question+". "; 
+           	   	            textToSpeechdata = textToSpeechdata + "The answer is "+answer+". ";  
 
 
                         }

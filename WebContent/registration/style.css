@@ -1,3 +1,6 @@
+
+
+
 .parsley-error-list {
    
     list-style: none;
@@ -106,6 +109,7 @@ html {
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  caret-color: #ffbc5a;
 }
 body {
   margin: 0;

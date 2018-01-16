@@ -103,7 +103,7 @@
 
 
 html {
-	
+	  caret-color: #ffbc5a;
 	word-wrap: break-word;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     -webkit-text-size-adjust: 100%;

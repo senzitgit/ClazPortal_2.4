@@ -94,7 +94,7 @@ String AttachmentDesc = "";
             item.write(uploadedFile);
 			
 			HttpClient httpClient = (HttpClient)session.getAttribute("client"); 
-			PostMethod postMethod = new PostMethod("http://192.168.10.50:8080/CyberClazServer/cyberclaz/uploadAttachmentViaPortal"); 
+			PostMethod postMethod = new PostMethod("https://clazserver.mybluemix.net/cyberclaz/uploadAttachmentViaPortal"); 
 			
 		
 		 	   String usersessionID = (String)session.getAttribute("userSessionId");

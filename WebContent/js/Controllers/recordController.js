@@ -370,7 +370,7 @@ function formatDate(date) {
 
 function start_websocket() {
 
-    websocket = new WebSocket("wss://"+webSocketIp+"/socket/" + userId);
+    websocket = new WebSocket("ws://"+webSocketIp+"/socket/" + userId);
 
     websocket.onopen = function() {
         websocket.send("ID3 ");
